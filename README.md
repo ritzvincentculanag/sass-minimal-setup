@@ -45,3 +45,46 @@ touch index.html
 # create styles.scss
 touch assets/sass/styles.scss
 ```
+
+5. After following the steps this is what your folder structure should look like.
+
+![tree structure](/assets/img/file-structure.png)
+
+## Installing SASS and setting up `sass watch`
+
+1. Go back to the root directory of your project and initialize it
+   as an npm project. It will create a `package.json` file containing meta
+   data about your project such as the auhtor, version, dependencies, etc.
+
+```bash
+npm init
+
+# Optional
+# You can run this command to skip answering the questions
+npm init -y
+```
+
+2. After initializing it as an npm project, go ahead and install sass.
+
+```bash
+npm install sass --save-dev
+```
+
+3. Open your `package.json` file and add the follwing lines of code
+   under the scripts section.
+
+```json
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    // Add these
+    "sass-watch": "sass --watch --update --style=expanded sass:css",
+    "sass-build": "sass --no-source-map --style=compressed sass:css"
+},
+```
+
+This is what your `package.json` should look like.
+![package json](/assets/img/package-json.png)
+
+5. To automatically start watching for changes in the sass folder, run
+   the command `npm run sass-watch`.
