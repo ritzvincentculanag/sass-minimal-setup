@@ -1,5 +1,6 @@
 # Minimal SASS setup for static websites
 
+> [!INFO]
 > This is my personal guide that I have written so I don't have to look for
 > resources in the web. This is inteded only for static websites.
 
